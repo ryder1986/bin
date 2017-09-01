@@ -13,11 +13,8 @@ function fun()
 	echo $3
 	fun1 $1 $2 $3
 }
-if [ $# -gt 0 ]
-then 
-if [ $2 = "-h" ]
-then 
-
+function fun_help()
+{
 	echo "----------------------"
 	echo "usage :"
 	echo "call + cmd + arg"
@@ -28,7 +25,19 @@ then
 	echo "content:"
 	cat /root/repo-github/bin/$1
 	echo "----------------------"
-else
+
+
+}
+function fun_exec()
+{
  	$1 $2
+}
+if [ $# -gt 1 ]
+then 
+if [ $2 = "-h" ]
+then 
+	fun_help $1
+else
+	fun_exec $1 $2
 fi
 fi
