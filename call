@@ -1,32 +1,28 @@
 #!/bin/bash
 
-function fun1()
-{
-	echo $1
-	echo $2
-	echo $3
-}
-function fun()
-{
-	echo $1
-	echo $2
-	echo $3
-	fun1 $1 $2 $3
-}
+ARG_NO=$#
+ARGS=$@
+echo  arg no:$ARG_NO  args: $ARGS
+ARGS_CMD=`echo $ARGS|sed "s/^**/ppp/g"`
+echo rst  $ARGS_CMD
+$ARGS
+#function fun_help()
+#{
+#	echo "----------------------"
+#	echo "usage :"
+#	echo "call + cmd + arg"
+#	echo "----------------------"
+#	echo "info:"
+#	type -a $1 
+#	echo "----------------------"
+#	echo "content:"
+#	cat /root/repo-github/bin/$1
+#	echo "----------------------"
+#}
+
 function fun_help()
 {
-	echo "----------------------"
-	echo "usage :"
-	echo "call + cmd + arg"
-	echo "----------------------"
-	echo "info:"
-	type -a $1 
-	echo "----------------------"
-	echo "content:"
-	cat /root/repo-github/bin/$1
-	echo "----------------------"
-
-
+    $1 -h
 }
 function fun_exec()
 {
@@ -36,18 +32,10 @@ function fun_exec_withoutarg()
 {
  	$1 
 }
-if [ $# -gt 1 ]
-then 
-if [ $2 = "-h" ]
-then 
-	fun_help $1
+if [ $# -gt 1 ] && [ $2 = "-h" ]
+then 	
+ 	fun_help $1
 else
 	fun_exec $1 $2
 fi
-else
-if [ $# = 1 ]
-then
-	fun_exec_withoutarg $1
 
-fi
-fi
