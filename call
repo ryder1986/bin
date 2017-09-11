@@ -1,11 +1,11 @@
 #!/bin/bash
-
+source bash_common_function.sh
 ARG_NO=$#
 ARGS=$@
-echo  arg no:$ARG_NO  args: $ARGS
+#echo  arg no:$ARG_NO  args: $ARGS
 ARGS_CMD=`echo $ARGS|sed "s/^**/ppp/g"`
-echo rst  $ARGS_CMD
-$ARGS
+#echo rst  $ARGS_CMD
+#$ARGS
 #function fun_help()
 #{
 #	echo "----------------------"
@@ -19,23 +19,38 @@ $ARGS
 #	cat /root/repo-github/bin/$1
 #	echo "----------------------"
 #}
-
+#readme 9
+function help()
+{
+ 	echo "help:call cmd -h"
+#   $1 -h
+}
 function fun_help()
 {
+# 	echo "help:call cmd -h"
     $1 -h
 }
 function fun_exec()
 {
- 	$1 $2
+ echo  $@
+ CMD=`echo $@ | sed s/^$1/\ /g   `
+$CMD
 }
 function fun_exec_withoutarg()
 {
  	$1 
 }
-if [ $# -gt 1 ] && [ $2 = "-h" ]
+echo $#
+if [ $# = 1  ] && [ $1 = "-h" ]
+then 	
+ 	help 
+ 
+
+
+elif [ $# = 2  ] && [ $2 = "-h" ]
 then 	
  	fun_help $1
 else
-	fun_exec $1 $2
+	fun_exec $1 $@
 fi
 
