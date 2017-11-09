@@ -1,0 +1,1 @@
+cmake -D CMAKE_INSTALL_PREFIX=/root/sources/opencv-2-4-9-1/build/__install ../
