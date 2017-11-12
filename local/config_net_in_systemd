@@ -5,6 +5,7 @@
 #smbd -D
 #/usr/sbin/setenforce 0 
 #ifconfig enp0s3  up
+/root/repo-github/bin/local/start-loop.sh&
 ifconfig   enp0s25  192.168.1.214 netmask 255.255.255.0
 route add default gw 192.168.1.1
 echo "nameserver 114.114.114.114" >> /etc/resolv.conf
