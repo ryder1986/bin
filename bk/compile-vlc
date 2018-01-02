@@ -1,0 +1,1 @@
+./configure  --disable-lua --disable-mad --disable-a52 --disable-alsa --disable-libgcrypt --prefix=$PWD/__install
