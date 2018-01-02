@@ -1,0 +1,3 @@
+echo "playing $1"
+echo "Plz use this url: rtsp://192.168.1.218:8554/test1"
+cvlc  $1  --sout '#rtp{sdp=rtsp://:8554/test1}'  --loop
