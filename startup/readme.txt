@@ -1,1 +1,1 @@
-exec the is /etc/rc.local
+exec this dir /etc/rc.local
