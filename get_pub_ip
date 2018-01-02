@@ -1,0 +1,4 @@
+cd /root/repo-github/bin
+date >> ../readonly_info/info.txt
+curl ident.me >> ../readonly_info/info.txt
+echo "_" >> ../readonly_info/info.txt
