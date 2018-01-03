@@ -1,0 +1,1 @@
+(terminator --geometry=900x80+40+40 -b&)
