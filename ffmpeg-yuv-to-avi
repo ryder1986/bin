@@ -1,1 +1,3 @@
 ffmpeg -s 640*480  -pix_fmt yuv420p -i 28s.yuv -vcodec mpeg4 output.avi
+#ffmpeg -s 640*480  -pix_fmt yuv420p -f rawvideo  -i 200frame.yuv2   -vcodec mpeg4 200frame.mp4
+#
