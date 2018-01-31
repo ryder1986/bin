@@ -1,0 +1,1 @@
+ffmpeg -i  28s.mp4  -c:v rawvideo -pix_fmt yuv420p 28s.yuv
