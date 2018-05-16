@@ -1,1 +1,7 @@
-https://wiki.archlinux.org/index.php/Xrandr_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29#.E6.B7.BB.E5.8A.A0.E6.9C.AA.E8.A2.AB.E6.A3.80.E6.B5.8B.E5.88.B0.E7.9A.84.E6.9C.89.E6.95.88.E5.88.86.E8.BE.A8.E7.8E.87
+#https://wiki.archlinux.org/index.php/Xrandr_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29#.E6.B7.BB.E5.8A.A0.E6.9C.AA.E8.A2.AB.E6.A3.80.E6.B5.8B.E5.88.B0.E7.9A.84.E6.9C.89.E6.95.88.E5.88.86.E8.BE.A8.E7.8E.87
+
+#cvt 1280 1024 
+xrandr --newmode "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
+
+xrandr --addmode VGA1 1280x1024_60.00
+xrandr --output VGA1 --mode 1280x1024_60.00
