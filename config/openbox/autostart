@@ -20,3 +20,4 @@ xcompmgr&
 #gnome-panel&
 xfce4-panel&
 yakuake&
+wmstickynotes  -d /root/repo-github/bin/config/wmstickynotes &
