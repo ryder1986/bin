@@ -1,5 +1,5 @@
 if [ $# = 3 ] ;then
-echo seting $3 with $1 x $1 
+echo seting $3 with $1 x $2 
 else
 echo "err: need 3 args,like--->  ./run.sh 800 600 newmode1"
 exit
