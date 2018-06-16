@@ -1,0 +1,20 @@
+if [ $# = 3 ] ;then
+echo seting $3 with $1 x $1 
+else
+echo "err: need 3 args,like--->  ./run.sh 800 600 newmode1"
+exit
+fi
+
+
+WI=$1
+HE=$2
+NA=$3
+STR=$(cvt $WI $HE |grep Mode |sed  s/\".*\"//g |sed s/Modeline//g)
+#echo $STR
+xrandr --newmode  $NA  $STR &>/dev/null
+if [ $? = 0  ];then
+xrandr --addmode  VGA-1 $NA
+xrandr --output VGA-1 --mode $NA
+else
+	echo error in setting name:$NA
+fi
