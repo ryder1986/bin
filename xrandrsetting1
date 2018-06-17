@@ -1,0 +1,20 @@
+if [ $# = 2 ] ;then
+echo seting with $1 x $2 
+else
+echo "err: need 2 args,like--->  ./run.sh 800 600 "
+exit
+fi
+
+
+WI=$1
+HE=$2
+NA=$1x$2
+STR=$(cvt $WI $HE |grep Mode |sed  s/\".*\"//g |sed s/Modeline//g)
+#echo $STR
+xrandr --newmode  $NA  $STR &>/dev/null
+if [ $? = 0  ];then
+xrandr --addmode  VGA-1 $NA
+xrandr --output VGA-1 --mode $NA
+else
+	echo error in setting name:$NA
+fi
