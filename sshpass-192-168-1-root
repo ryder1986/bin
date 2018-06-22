@@ -1,0 +1,20 @@
+source bash_common_function.sh
+#function readme()
+#{
+#	echo readme...
+#	echo usage: need $1 args  
+#	echo cmd src_string dst_string abs_path
+#}
+if [ $# = 1 ] && [ $1 != "-h" ]
+then 
+IP=$1
+#grep -R gg .
+funtion_start_coment "ssh 192.168.1.xx"
+sshpass  -p root  ssh 192.168.1.$IP -l root
+funtion_end_coment "done"
+#sed -i "s/gg/gg/g" `grep gg  -rl /root/repo-github/bin/test`
+else
+	ARG_NO=$#
+	funtion_help 1 "get $ARG_NO args ,invalid usage,should be: [ cmd + ip ], like [ ssh-192   211 ]"
+fi
+

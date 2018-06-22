@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>1</number>
+    <number>2</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>main desktop</name>
@@ -424,20 +424,17 @@
       </mousebind>
     </context>
     <context name="Titlebar">
-    
-    <mousebind button="C-Down" action="Click">
+      <mousebind button="C-Down" action="Click">
         <action name="Execute">
-            <execute>transset -a  --dec 0.1</execute>
+          <execute>transset -a  --dec 0.1</execute>
         </action>
-    </mousebind>
-    
-    <mousebind button="C-up" action="Click">
+      </mousebind>
+      <mousebind button="C-up" action="Click">
         <action name="Execute">
-            <execute>transset -a  --inc 0.1</execute>
+          <execute>transset -a  --inc 0.1</execute>
         </action>
-    </mousebind>
-
-     <mousebind button="Left" action="Drag">
+      </mousebind>
+      <mousebind button="Left" action="Drag">
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
