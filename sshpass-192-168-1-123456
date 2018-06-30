@@ -10,7 +10,7 @@ then
 IP=$1
 #grep -R gg .
 funtion_start_coment "ssh 192.168.1.xx"
-sshpass  -p 123456 ssh 192.168.1.$IP -l root
+sshpass  -p 123456 ssh 192.168.1.$IP -X  -l root
 funtion_end_coment "done"
 #sed -i "s/gg/gg/g" `grep gg  -rl /root/repo-github/bin/test`
 else
