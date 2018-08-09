@@ -1,0 +1,8 @@
+git config --global https.proxy http://192.168.1.252:8580
+git config --global https.proxy https://192.168.1.252:8580
+git config --global http.proxy 'socks5://192.168.1.252:8580' 
+git config --global https.proxy 'socks5://192.168.1.252.8580'
+
+#git config --global --unset http.proxy
+
+#git config --global --unset https.proxy
