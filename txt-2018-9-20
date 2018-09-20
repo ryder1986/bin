@@ -1,0 +1,15 @@
+mysql basic cmd: http://www.runoob.com/mysql/mysql-select-query.html
+CREATE DATABASE 数据库名;
+drop database <数据库名>;
+use xx;
+
+CREATE TABLE table_name (column_name column_type);
+DROP TABLE table_name ;
+
+
+INSERT INTO
+table_name ( field1, field2,...fieldN )
+VALUES  ( value1, value2,...valueN );
+
+
+
