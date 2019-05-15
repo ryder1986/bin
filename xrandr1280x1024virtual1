@@ -1,0 +1,6 @@
+#https://wiki.archlinux.org/index.php/Xrandr_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29#.E6.B7.BB.E5.8A.A0.E6.9C.AA.E8.A2.AB.E6.A3.80.E6.B5.8B.E5.88.B0.E7.9A.84.E6.9C.89.E6.95.88.E5.88.86.E8.BE.A8.E7.8E.87
+
+#cvt 1280 1024 
+xrandr --newmode  "1111"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 
+xrandr --addmode Virtual1 1111 
+xrandr --output Virtual1 --mode 1111

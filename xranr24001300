@@ -1,0 +1,3 @@
+xrandr --newmode  2400x1400  284.00  2400 2576 2832 3264  1400 1403 1413 1451 -hsync +vsync
+xrandr --addmode Virtual1 2400x1400
+xrandr --output Virtual1 --mode 2400x1400
